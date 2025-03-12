@@ -1,9 +1,10 @@
 
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface AnimatedTextProps {
-  text: string;
+  text?: string;
+  children?: ReactNode;
   className?: string;
   delay?: number;
   animation?: "fade-in" | "fade-in-right" | "fade-in-left" | "blur-in" | "scale-in";
@@ -12,6 +13,7 @@ interface AnimatedTextProps {
 
 const AnimatedText: FC<AnimatedTextProps> = ({
   text,
+  children,
   className,
   delay = 0,
   animation = "fade-in",
@@ -55,7 +57,7 @@ const AnimatedText: FC<AnimatedTextProps> = ({
       ref={textRef} 
       className={cn("opacity-0", className)}
     >
-      {text}
+      {children || text}
     </div>
   );
 };
