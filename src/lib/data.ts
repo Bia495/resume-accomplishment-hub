@@ -20,7 +20,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/mico-banzuela-388203368/",
     icon: "linkedin",
   },
   {
@@ -141,6 +141,6 @@ export const projects: Project[] = [
     description: "An AI-Image processing mobile app for detecting pests in crops.",
     technologies: ["Python", "CNN", "Java", "Agile"],
     image: "/ic_launchers-playstore.png",
-    link: "https://project-example.com",
+    link: "https://r.mtdv.me/videos/yeah",
   },
 ];
