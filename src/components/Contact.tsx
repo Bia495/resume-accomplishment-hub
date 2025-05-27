@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="container">
         <SectionTitle
           title="Get In Touch"
-          subtitle="Let's talk about your project or job opportunities"
+          subtitle="Contact me for inquiries!"
         />
 
         <div className="grid md:grid-cols-2 gap-12">

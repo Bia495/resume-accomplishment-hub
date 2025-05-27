@@ -84,7 +84,7 @@ const ContactInfo = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="button-transition inline-flex items-center justify-center rounded-full w-12 h-12 bg-white shadow-subtle text-foreground hover:bg-accent hover:text-white"
+              className="button-transition inline-flex items-center justify-center rounded-full w-12 h-12 bg-card border border-border shadow-subtle text-foreground hover:bg-accent hover:text-accent-foreground"
               aria-label={social.platform}
             >
               {social.icon === "github" && <Github size={20} />}

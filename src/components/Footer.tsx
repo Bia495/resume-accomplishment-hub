@@ -14,14 +14,14 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-white py-12">
+    <footer className="bg-primary text-primary-foreground py-12">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h2 className="text-xl font-semibold">
               M.B.B
             </h2>
-            <p className="text-sm mt-2 text-muted-foreground max-w-xs">
+            <p className="text-sm mt-2 text-primary-foreground/70 max-w-xs">
               {personalInfo.title}
             </p>
           </div>
@@ -32,13 +32,13 @@ const Footer = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-white/70 hover:text-white button-transition"
+                  className="text-sm text-primary-foreground/70 hover:text-primary-foreground button-transition"
                 >
                   {item.name}
                 </a>
               ))}
             </nav>
-            <p className="text-xs text-white/60">
+            <p className="text-xs text-primary-foreground/60">
               &copy; {year} {personalInfo.name}. All rights reserved.
             </p>
           </div>

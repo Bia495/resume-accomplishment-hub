@@ -28,7 +28,7 @@ const Experience = () => {
 
                 <div
                   className={`${
-                    index % 2 === 0 ? "md:text-right" : "md:order-1"
+                    index % 2 === 0 ? "" : "md:order-1"
                   }`}
                 >
                   <AnimatedText
@@ -36,14 +36,9 @@ const Experience = () => {
                     animation={index % 2 === 0 ? "fade-in-right" : "fade-in-left"}
                     className="neo-card p-6"
                   >
-                    <h3 className="font-semibold text-lg flex items-center md:justify-end gap-2">
-                      {index % 2 !== 0 && (
-                        <Briefcase size={18} className="text-accent" />
-                      )}
+                    <h3 className="font-semibold text-lg flex items-center gap-2">
+                      <Briefcase size={18} className="text-accent" />
                       {job.title}
-                      {index % 2 === 0 && (
-                        <Briefcase size={18} className="text-accent" />
-                      )}
                     </h3>
                     <div className="text-muted-foreground">
                       {job.company}, {job.location}
