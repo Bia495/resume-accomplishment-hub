@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { cn } from "@/lib/utils";
+import emailjs from '@emailjs/browser';
 import AnimatedText from "../ui/AnimatedText";
 import SuccessMessage from "./SuccessMessage";
 import SubmitButton from "./SubmitButton";
@@ -14,6 +14,11 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // EmailJS configuration
+  const EMAILJS_SERVICE_ID = 'service_6km5zro';
+  const EMAILJS_TEMPLATE_ID = 'template_hqius5n'; // You'll need to create this
+  const EMAILJS_PUBLIC_KEY = 'Ru5lA9SMFvdzWKaQh'; // You'll need to get this from EmailJS
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -24,13 +29,27 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
+    try {
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'Mico Banzuela', // Your name
+      };
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log("Email sent successfully!");
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: "", email: "", message: "" });
@@ -39,7 +58,12 @@ const ContactForm = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setIsSubmitting(false);
+      // You could add error handling here
+      alert("Failed to send message. Please try again or contact me directly.");
+    }
   };
 
   return (

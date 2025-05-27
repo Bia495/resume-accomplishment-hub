@@ -128,7 +128,7 @@ const About = () => {
                       Civil Service Commission
                     </div>
                     <div className="text-sm text-muted-foreground mt-1">
-                      May 2024
+                      March 2024
                     </div>
                     <p className="mt-2 text-muted-foreground">
                       Successfully passed the Career Service Examination - Professional Level, demonstrating competency in public service.
