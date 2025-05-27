@@ -7,35 +7,67 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 240 10% 3.9%;
+    /* Light mode - Black and Blue theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 0 0% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 0 0% 3.9%;
 
-    --primary: 220 14% 10%;
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 220 14% 92%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 230 4% 50%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 220 79% 48%;
+    --accent: 221 83% 53%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 32% 92%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
 
     --radius: 1rem;
+  }
+
+  .dark {
+    /* Dark mode - Black and Blue theme */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
   }
 
   * {
@@ -48,7 +80,7 @@
     @apply bg-background text-foreground overflow-x-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
-  
+
   html {
     @apply scroll-smooth;
   }
@@ -58,35 +90,35 @@
   .container {
     @apply px-4 lg:px-8 mx-auto max-w-7xl;
   }
-  
+
   .section {
     @apply py-16 md:py-24;
   }
-  
+
   .glass-card {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-glass rounded-2xl;
+    @apply bg-card/80 backdrop-blur-sm border border-border/20 shadow-glass rounded-2xl;
   }
-  
+
   .neo-card {
-    @apply bg-white border border-slate-100 shadow-subtle rounded-2xl;
+    @apply bg-card border border-border shadow-subtle rounded-2xl;
   }
-  
+
   .section-title-container {
     @apply flex flex-col items-center mb-12 relative;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-bold tracking-tight relative z-10;
   }
-  
+
   .section-subtitle {
     @apply text-muted-foreground mt-2 max-w-xl text-center;
   }
-  
+
   .button-transition {
     @apply transition-all duration-300 ease-apple;
   }
-  
+
   .text-balance {
     text-wrap: balance;
   }
@@ -117,4 +149,118 @@
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Enhanced animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInBlur {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Animation classes */
+.animate-slide-in-up {
+  animation: slideInUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-fade-in-blur {
+  animation: fadeInBlur 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Loading animations */
+.pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth scrolling enhancement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent) / 0.8);
 }

@@ -3,30 +3,30 @@ import { Experience, Project, SkillCategory, SocialLink, Education } from "@/typ
 
 // Replace with your information
 export const personalInfo = {
-  name: "John Anderson",
-  title: "Senior Software Engineer",
-  email: "johndoe@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
-  bio: "Passionate software engineer with over 7 years of experience building elegant, user-centered digital experiences. I specialize in React, TypeScript, and modern frontend architecture. I approach each project with a focus on scalability, accessibility, and clean code.",
-  avatar: "/placeholder.svg", // Replace with your photo
+  name: "Mico Banzuela",
+  title: "Software/Web Backend Developer",
+  email: "micobanzuela30@gmail.com",
+  phone: "+63 951 125 9018",
+  location: "Legazpi City, Albay, Philippines",
+  bio: "Passionate web/software developer and Computer Science graduate from Bicol University College of Science with exceptional foundational knowledge in web and system development. I specialize in creating robust, scalable applications using modern technologies and best practices.",
+  avatar: "/Main_photo.png",
 };
 
 export const socialLinks: SocialLink[] = [
   {
     platform: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/Bia495",
     icon: "github",
   },
   {
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/mico-banzuela-388203368/",
     icon: "linkedin",
   },
   {
-    platform: "Twitter",
-    url: "https://twitter.com/yourusername",
-    icon: "twitter",
+    platform: "Facebook",
+    url: "https://www.facebook.com/oh.yeahnoicee",
+    icon: "facebook",
   },
 ];
 
@@ -34,10 +34,10 @@ export const skills: SkillCategory[] = [
   {
     name: "Frontend",
     skills: [
-      { name: "React", level: 5 },
-      { name: "TypeScript", level: 5 },
+      { name: "React", level: 3 },
+      { name: "TypeScript", level: 4 },
       { name: "HTML/CSS", level: 5 },
-      { name: "Next.js", level: 4 },
+      { name: "Next.js", level: 3 },
       { name: "Tailwind CSS", level: 4 },
     ],
   },
@@ -47,7 +47,7 @@ export const skills: SkillCategory[] = [
       { name: "Node.js", level: 4 },
       { name: "Express", level: 4 },
       { name: "PostgreSQL", level: 3 },
-      { name: "MongoDB", level: 3 },
+      { name: "TypeScript", level: 4 },
     ],
   },
   {
@@ -63,79 +63,84 @@ export const skills: SkillCategory[] = [
 
 export const experience: Experience[] = [
   {
-    title: "Senior Frontend Engineer",
-    company: "TechCorp Inc.",
-    location: "San Francisco, CA",
-    period: "Jan 2021 - Present",
-    description: "Leading frontend development for a SaaS platform with over 100,000 users.",
+    title: "(INTERN) Backend Developer - SCRUM Master",
+    company: "Quanby Solutions Inc.",
+    location: "Legazpi, Albay",
+    period: "October 2024 - May 2025",
+    description: "Backend developer and also a SCRUM master for the Business Management System project.",
     achievements: [
-      "Rebuilt the frontend architecture using React and TypeScript, improving load times by 40%",
-      "Led a team of 5 engineers, implementing agile methodologies that increased sprint velocity by 30%",
-      "Developed a component library that reduced development time for new features by 50%",
+      "Succesfully built a functional Business Managing System with 7 different user-based role accounts.",
+      "Rapid deployment, a 5 member team comprised each with specific roles",
+      "100% user-friendly and easy to use software",
     ],
   },
   {
-    title: "Frontend Developer",
-    company: "InnovateSoft",
-    location: "Portland, OR",
-    period: "Mar 2018 - Dec 2020",
-    description: "Developed frontend solutions for enterprise clients in the finance sector.",
+    title: "OJT Web-Backend Developer",
+    company: "Quanby Solutions Inc.",
+    location: "Legazpi, Albay",
+    period: "June-July 2024",
+    description: "Foundation for web development using angular, typescript, tailwind CSS, and postgreSQL for Database Management.",
     achievements: [
-      "Built responsive web applications with React, Redux, and SCSS",
-      "Implemented automated testing that caught 95% of bugs before production",
-      "Collaborated with UX team to implement design systems that improved user satisfaction by 25%",
+      "Backend and assistant database developer for the lead web appproject entitled “Human Resource Information System",
     ],
   },
   {
-    title: "Web Developer",
-    company: "Digital Solutions Agency",
-    location: "Seattle, WA",
-    period: "Jun 2016 - Feb 2018",
-    description: "Created custom websites and web applications for clients across various industries.",
+    title: "Freelancer",
+    company: "Self-employed",
+    location: "Albay",
+    period: "2023-present",
+    description: "Freelance repairman and encoder, AI Backend and other ML projects.",
     achievements: [
-      "Developed over 20 client websites using modern frontend technologies",
-      "Optimized website performance, achieving 90+ PageSpeed scores",
-      "Implemented SEO best practices that increased organic traffic by 45%",
+      "Specialized in AI Backend and Machine Learning projects.",
+      "Freelance projects developing AI models, particularly for classmates' theses.",
+      "Project accomplishments: Volcanews NLP-GPT 2 model, Pest detection using AI image processing.",
+      "Freelancing in repairing software defects for phones, laptops, and system cleanups.",
+      "Handled various encoding tasks such as data encoding.",
+      "Worked on thesis commissions as part-time work.",
+    ],
+  },
+  {
+    title: "Data annotator",
+    company: " Lifewood Data Technology Ltd.",
+    location: "Legazpi, Albay",
+    period: "2022-2023",
+    description: " Part time data encoder",
+    achievements: [
+      "Encoded and recorded various client requests, including  International events, Genealogy files, and Karaoke song records",
     ],
   },
 ];
 
 export const education: Education[] = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "Stanford University",
-    location: "Stanford, CA",
-    period: "2014 - 2016",
-    description: "Specialized in Human-Computer Interaction and Software Engineering",
-  },
-  {
-    degree: "Bachelor of Science in Computer Engineering",
-    institution: "University of Washington",
-    location: "Seattle, WA",
-    period: "2010 - 2014",
+    degree: "Bachelor of Science in Computer Science",
+    institution: "Bicol University College of Science",
+    location: "Legazpi City, Albay, Philippines",
+    period: "2020 - 2025",
+    description: "Graduated with exceptional foundational knowledge in web and system development, software engineering principles, and modern programming methodologies",
   },
 ];
 
 export const projects: Project[] = [
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    link: "https://project-example.com",
+    title: "Business Management System",
+    description: "A centralized platform designed to streamline, digitize, and automate business operations, primarily focused on business permit applications, processing, and compliance monitoring.",
+    technologies: ["Angular", "TypeScript", "PostgreSQL"],
+    image: "bms-dashboard.png",
+    link: "https://quanby-bms.web.app/regulatory/dashboard",
   },
   {
-    title: "Healthcare Management System",
+    title: "Talk-twah: your personal AI voice coaching assistant",
     description: "A comprehensive system for healthcare providers to manage patient data, appointments, and billing.",
-    technologies: ["React", "TypeScript", "Express", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    link: "https://project-example.com",
+    technologies: ["Python", "NLP", "Reinforcement Learning", "React"],
+    image: "talktwah.jpg",
+    link: "https://guthib.com",
   },
   {
-    title: "Real-time Analytics Dashboard",
-    description: "An interactive dashboard displaying real-time data visualizations for business intelligence.",
-    technologies: ["React", "D3.js", "WebSockets", "Redis"],
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    link: "https://project-example.com",
+    title: "Pestifier",
+    description: "An AI-Image processing mobile app for detecting pests in crops.",
+    technologies: ["Python", "CNN", "Java", "Agile"],
+    image: "/ic_launchers-playstore.png",
+    link: "https://r.mtdv.me/videos/yeah",
   },
 ];

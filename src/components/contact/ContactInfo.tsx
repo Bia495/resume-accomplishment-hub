@@ -1,6 +1,6 @@
 
 import { personalInfo, socialLinks } from "@/lib/data";
-import { MapPin, Mail, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Mail, Phone, Github, Linkedin, Facebook } from "lucide-react";
 import AnimatedText from "../ui/AnimatedText";
 
 const ContactInfo = () => {
@@ -84,12 +84,12 @@ const ContactInfo = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="button-transition inline-flex items-center justify-center rounded-full w-12 h-12 bg-white shadow-subtle text-foreground hover:bg-accent hover:text-white"
+              className="button-transition inline-flex items-center justify-center rounded-full w-12 h-12 bg-card border border-border shadow-subtle text-foreground hover:bg-accent hover:text-accent-foreground"
               aria-label={social.platform}
             >
               {social.icon === "github" && <Github size={20} />}
               {social.icon === "linkedin" && <Linkedin size={20} />}
-              {social.icon === "twitter" && <Twitter size={20} />}
+              {social.icon === "facebook" && <Facebook size={20} />}
             </a>
           </AnimatedText>
         ))}

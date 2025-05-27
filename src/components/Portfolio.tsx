@@ -30,7 +30,7 @@ const Portfolio = () => {
                 />
               </div>
 
-              <div className="p-6 bg-white">
+              <div className="p-6 bg-card border-t border-border">
                 <h3 className="font-semibold text-lg mb-2 group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>

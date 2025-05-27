@@ -34,7 +34,7 @@ const ContactForm = () => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: "", email: "", message: "" });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
@@ -65,8 +65,8 @@ const ContactForm = () => {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-muted bg-white/50 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-              placeholder="John Doe"
+              className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+              placeholder="Mico Banzuela"
             />
           </div>
 
@@ -81,8 +81,8 @@ const ContactForm = () => {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-muted bg-white/50 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-              placeholder="john@example.com"
+              className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+              placeholder="mico@example.com"
             />
           </div>
 
@@ -97,7 +97,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               rows={5}
-              className="w-full px-4 py-3 rounded-lg border border-muted bg-white/50 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all resize-none"
+              className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all resize-none"
               placeholder="Hello, I'd like to talk about..."
             />
           </div>
