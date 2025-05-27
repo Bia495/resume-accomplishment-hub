@@ -131,7 +131,7 @@ export const projects: Project[] = [
   },
   {
     title: "Talk-twah: your personal AI voice coaching assistant",
-    description: "A comprehensive system for healthcare providers to manage patient data, appointments, and billing.",
+    description: "An AI-Natural Language Processing model applied with Deep Reinforcement Learning for speech rate and emotion feedback.",
     technologies: ["Python", "NLP", "Reinforcement Learning", "React"],
     image: "talktwah.jpg",
     link: "https://guthib.com",
