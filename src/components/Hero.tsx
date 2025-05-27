@@ -1,7 +1,7 @@
 
 import { personalInfo, socialLinks } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Facebook } from "lucide-react";
 import AnimatedText from "./ui/AnimatedText";
 
 const Hero = () => {
@@ -63,7 +63,7 @@ const Hero = () => {
                     >
                       {social.icon === "github" && <Github size={18} />}
                       {social.icon === "linkedin" && <Linkedin size={18} />}
-                      {social.icon === "twitter" && <Twitter size={18} />}
+                      {social.icon === "facebook" && <Facebook size={18} />}
                     </a>
                   </AnimatedText>
                 ))}

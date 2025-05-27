@@ -19,8 +19,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h2 className="text-xl font-semibold">
-              {personalInfo.name.split(" ")[0]}
-              <span className="text-accent">.</span>
+              M.B.B
             </h2>
             <p className="text-sm mt-2 text-muted-foreground max-w-xs">
               {personalInfo.title}

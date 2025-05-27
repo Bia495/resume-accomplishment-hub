@@ -1,5 +1,5 @@
 
-import { FC, useEffect, useRef, ReactNode } from "react";
+import { FC, useEffect, useRef, ReactNode, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface AnimatedTextProps {
@@ -20,42 +20,46 @@ const AnimatedText: FC<AnimatedTextProps> = ({
   once = true,
 }) => {
   const textRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const element = textRef.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && !isVisible) {
             setTimeout(() => {
+              setIsVisible(true);
               entry.target.classList.add(`animate-${animation}`);
             }, delay);
-            
+
             if (once) {
               observer.unobserve(entry.target);
             }
-          } else if (!once) {
+          } else if (!once && !entry.isIntersecting) {
+            setIsVisible(false);
             entry.target.classList.remove(`animate-${animation}`);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
-    if (textRef.current) {
-      observer.observe(textRef.current);
-    }
+    observer.observe(element);
 
     return () => {
-      if (textRef.current) {
-        observer.unobserve(textRef.current);
-      }
+      observer.unobserve(element);
     };
-  }, [animation, delay, once]);
+  }, [animation, delay, once, isVisible]);
 
   return (
-    <div 
-      ref={textRef} 
-      className={cn("opacity-0", className)}
+    <div
+      ref={textRef}
+      className={cn("opacity-0 transition-opacity duration-300", className, {
+        "opacity-100": isVisible
+      })}
     >
       {children || text}
     </div>

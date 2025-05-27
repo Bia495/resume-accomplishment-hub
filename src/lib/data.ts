@@ -3,19 +3,19 @@ import { Experience, Project, SkillCategory, SocialLink, Education } from "@/typ
 
 // Replace with your information
 export const personalInfo = {
-  name: "John Anderson",
-  title: "Senior Software Engineer",
-  email: "johndoe@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
-  bio: "Passionate software engineer with over 7 years of experience building elegant, user-centered digital experiences. I specialize in React, TypeScript, and modern frontend architecture. I approach each project with a focus on scalability, accessibility, and clean code.",
-  avatar: "/placeholder.svg", // Replace with your photo
+  name: "Mico Banzuela",
+  title: "Software/Web Backend Developer",
+  email: "micobanzuela30@gmail.com",
+  phone: "+63 951 125 9018",
+  location: "Legazpi City, Albay, Philippines",
+  bio: "Passionate web/software developer and Computer Science graduate from Bicol University College of Science with exceptional foundational knowledge in web and system development. I specialize in creating robust, scalable applications using modern technologies and best practices.",
+  avatar: "/placeholder.png", // Replace with your photo
 };
 
 export const socialLinks: SocialLink[] = [
   {
     platform: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/Bia495",
     icon: "github",
   },
   {
@@ -24,9 +24,9 @@ export const socialLinks: SocialLink[] = [
     icon: "linkedin",
   },
   {
-    platform: "Twitter",
-    url: "https://twitter.com/yourusername",
-    icon: "twitter",
+    platform: "Facebook",
+    url: "https://www.facebook.com/oh.yeahnoicee",
+    icon: "facebook",
   },
 ];
 
@@ -34,10 +34,10 @@ export const skills: SkillCategory[] = [
   {
     name: "Frontend",
     skills: [
-      { name: "React", level: 5 },
-      { name: "TypeScript", level: 5 },
+      { name: "React", level: 3 },
+      { name: "TypeScript", level: 4 },
       { name: "HTML/CSS", level: 5 },
-      { name: "Next.js", level: 4 },
+      { name: "Next.js", level: 3 },
       { name: "Tailwind CSS", level: 4 },
     ],
   },
@@ -47,7 +47,7 @@ export const skills: SkillCategory[] = [
       { name: "Node.js", level: 4 },
       { name: "Express", level: 4 },
       { name: "PostgreSQL", level: 3 },
-      { name: "MongoDB", level: 3 },
+      { name: "TypeScript", level: 4 },
     ],
   },
   {
@@ -63,15 +63,15 @@ export const skills: SkillCategory[] = [
 
 export const experience: Experience[] = [
   {
-    title: "Senior Frontend Engineer",
-    company: "TechCorp Inc.",
-    location: "San Francisco, CA",
-    period: "Jan 2021 - Present",
-    description: "Leading frontend development for a SaaS platform with over 100,000 users.",
+    title: "(INTERN) Backend Developer - SCRUM Master",
+    company: "Quanby Solutions Inc.",
+    location: "Legazpi, Albay",
+    period: "October 2024 - May 2025",
+    description: "Backend developer and also a SCRUM master for the Business Management System project.",
     achievements: [
-      "Rebuilt the frontend architecture using React and TypeScript, improving load times by 40%",
-      "Led a team of 5 engineers, implementing agile methodologies that increased sprint velocity by 30%",
-      "Developed a component library that reduced development time for new features by 50%",
+      "Succesfully built a functional Business Managing System with 7 different user-based role accounts.",
+      "Rapid deployment, a 5 member team comprised each with specific roles",
+      "100% user-friendly and easy to use software",
     ],
   },
   {
@@ -102,27 +102,21 @@ export const experience: Experience[] = [
 
 export const education: Education[] = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "Stanford University",
-    location: "Stanford, CA",
-    period: "2014 - 2016",
-    description: "Specialized in Human-Computer Interaction and Software Engineering",
-  },
-  {
-    degree: "Bachelor of Science in Computer Engineering",
-    institution: "University of Washington",
-    location: "Seattle, WA",
-    period: "2010 - 2014",
+    degree: "Bachelor of Science in Computer Science",
+    institution: "Bicol University College of Science",
+    location: "Legazpi City, Albay, Philippines",
+    period: "2020 - 2025",
+    description: "Graduated with exceptional foundational knowledge in web and system development, software engineering principles, and modern programming methodologies",
   },
 ];
 
 export const projects: Project[] = [
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "Business Management System",
+    description: "A centralized platform designed to streamline, digitize, and automate business operations, primarily focused on business permit applications, processing, and compliance monitoring.",
+    technologies: ["Angular", "TypeScript", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    link: "https://project-example.com",
+    link: "https://quanby-bms.web.app/regulatory/dashboard",
   },
   {
     title: "Healthcare Management System",

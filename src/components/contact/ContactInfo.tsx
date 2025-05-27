@@ -1,6 +1,6 @@
 
 import { personalInfo, socialLinks } from "@/lib/data";
-import { MapPin, Mail, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Mail, Phone, Github, Linkedin, Facebook } from "lucide-react";
 import AnimatedText from "../ui/AnimatedText";
 
 const ContactInfo = () => {
@@ -89,7 +89,7 @@ const ContactInfo = () => {
             >
               {social.icon === "github" && <Github size={20} />}
               {social.icon === "linkedin" && <Linkedin size={20} />}
-              {social.icon === "twitter" && <Twitter size={20} />}
+              {social.icon === "facebook" && <Facebook size={20} />}
             </a>
           </AnimatedText>
         ))}

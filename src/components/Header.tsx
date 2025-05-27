@@ -22,11 +22,11 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Find the active section
       const sections = navigation.map((item) => item.href.substring(1));
       const scrollPosition = window.scrollY + 100;
-      
+
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && section.offsetTop <= scrollPosition) {
@@ -56,22 +56,21 @@ const Header = () => {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 ease-apple",
-        isScrolled 
-          ? "bg-white/80 backdrop-blur-md shadow-subtle" 
+        isScrolled
+          ? "bg-white/80 backdrop-blur-md shadow-subtle"
           : "bg-transparent"
       )}
     >
       <div className="container flex items-center justify-between">
-        <a 
-          href="#home" 
+        <a
+          href="#home"
           className="text-xl font-semibold tracking-tight"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("#home");
           }}
         >
-          {personalInfo.name.split(" ")[0]}
-          <span className="text-accent">.</span>
+          M.B.B
         </a>
 
         {/* Desktop Navigation */}
