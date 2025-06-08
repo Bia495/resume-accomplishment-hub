@@ -20,7 +20,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "LinkedIn",
-    url: "https://www.linkedin.com/in/mico-banzuela-388203368/",
+    url: "https://www.linkedin.com/in/mico-banzuela-728842207/",
     icon: "linkedin",
   },
   {
