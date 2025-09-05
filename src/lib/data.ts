@@ -9,7 +9,7 @@ export const personalInfo = {
   phone: "+63 951 125 9018",
   location: "Legazpi City, Albay, Philippines",
   bio: "Passionate web/software developer and Computer Science graduate from Bicol University College of Science with exceptional foundational knowledge in web and system development. I specialize in creating robust, scalable applications using modern technologies and best practices.",
-  avatar: "/Main_photo.png",
+  avatar: "/Main_photo.jpg",
 };
 
 export const socialLinks: SocialLink[] = [

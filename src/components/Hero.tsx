@@ -38,12 +38,6 @@ const Hero = () => {
                 />
               </div>
 
-              <AnimatedText
-                text={personalInfo.bio}
-                className="max-w-xl text-muted-foreground text-balance leading-relaxed"
-                animation="fade-in"
-                delay={300}
-              />
 
               <div className="flex space-x-5 pt-2">
                 {socialLinks.map((social, index) => (
@@ -97,7 +91,7 @@ const Hero = () => {
 
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-glass animate-float">
+              <div className="w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden border-4 border-white shadow-glass animate-float">
                 <img
                   src={personalInfo.avatar}
                   alt={personalInfo.name}
@@ -111,12 +105,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-60">
+      {/* <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-60">
         <span className="text-xs text-muted-foreground mb-2">Scroll</span>
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground flex justify-center p-1">
           <div className="w-1 h-2 bg-muted-foreground rounded-full animate-float" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
