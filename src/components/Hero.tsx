@@ -15,10 +15,10 @@ const Hero = () => {
       <div className="absolute bottom-24 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10" />
 
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="space-y-6">
-              <div className="inline-block">
+        <div className="grid lg:grid-cols-2 gap-12 items-center justify-center text-center md:text-left">
+          <div className="order-2 lg:order-1 flex flex-col items-center justify-center md:items-start md:justify-start">
+            <div className="space-y-6 w-full flex flex-col items-center md:items-start">
+              <div className="inline-block w-full">
                 <AnimatedText
                   text="Hello, I'm"
                   className="text-muted-foreground text-lg mb-2"
@@ -39,7 +39,7 @@ const Hero = () => {
               </div>
 
 
-              <div className="flex space-x-5 pt-2">
+              <div className="flex space-x-5 pt-2 justify-center md:justify-start">
                 {socialLinks.map((social, index) => (
                   <AnimatedText
                     key={social.platform}
@@ -63,7 +63,7 @@ const Hero = () => {
                 ))}
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center md:justify-start">
                 <AnimatedText
                   text=""
                   className="inline-block"
@@ -89,7 +89,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
             <div className="relative">
               <div className="w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden border-4 border-white shadow-glass animate-float">
                 <img
