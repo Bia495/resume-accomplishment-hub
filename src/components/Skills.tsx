@@ -91,67 +91,23 @@ const Skills = () => {
                 </div>
               </div>
 
-              {/* Skills List */}
-              <div className="space-y-5">
-                {category.skills.map((skill, skillIndex) => {
+              {/* Skills List - Simplified */}
+              <div className="space-y-3">
+                {category.skills.map((skill) => {
                   const skillInfo = getSkillDescription(skill.level);
                   return (
                     <div
                       key={skill.name}
-                      className="group/skill space-y-3 p-3 rounded-lg hover:bg-secondary/50 transition-all duration-300"
+                      className="flex justify-between items-center p-3 rounded-lg bg-secondary/40 hover:bg-secondary/70 transition-all duration-200"
                     >
-                      {/* Skill Name and Level */}
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-sm">{skill.name}</span>
-                        <div className={`flex items-center gap-1 text-xs font-medium ${skillInfo.color}`}>
-                          {skillInfo.icon}
-                          <span>{skillInfo.text}</span>
-                        </div>
-                      </div>
-
-                      {/* Star Rating */}
-                      <div className="flex items-center justify-between">
-                        <div className="flex gap-1">
-                          {renderStars(skill.level)}
-                        </div>
-                        <span className="text-xs text-muted-foreground font-mono">
-                          {skill.level}/5
-                        </span>
-                      </div>
-
-                      {/* Animated Progress Bar */}
-                      <div className="relative">
-                        <div className="h-2 w-full bg-secondary rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-accent to-accent/80 rounded-full transform origin-left transition-all duration-1000 ease-out group-hover/skill:shadow-lg"
-                            style={{
-                              transform: `scaleX(${skill.level / 5})`,
-                              transitionDelay: `${(categoryIndex * 200) + (skillIndex * 150)}ms`
-                            }}
-                          />
-                        </div>
-                        {/* Percentage Label */}
-                        <div
-                          className="absolute -top-6 text-xs font-medium text-accent opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300"
-                          style={{
-                            left: `${(skill.level / 5) * 100}%`,
-                            transform: 'translateX(-50%)'
-                          }}
-                        >
-                          {skill.level * 20}%
-                        </div>
-                      </div>
+                      <span className="font-medium text-sm">{skill.name}</span>
+                      <span className={`flex items-center gap-1 text-xs font-medium ${skillInfo.color}`}>
+                        {skillInfo.icon}
+                        {skillInfo.text}
+                      </span>
                     </div>
                   );
                 })}
-              </div>
-
-              {/* Category Footer */}
-              <div className="mt-6 pt-4 border-t border-border/50">
-                <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                  <Sparkles size={12} className="text-accent" />
-                  <span>{category.skills.length} Technologies</span>
-                </div>
               </div>
             </AnimatedText>
           ))}
