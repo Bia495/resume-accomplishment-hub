@@ -126,21 +126,26 @@ export const projects: Project[] = [
     title: "Business Management System",
     description: "A centralized platform designed to streamline, digitize, and automate business operations, primarily focused on business permit applications, processing, and compliance monitoring.",
     technologies: ["Angular", "TypeScript", "PostgreSQL"],
-    image: "bms-dashboard.png",
+    image: "/bms/bms-dashboard.png",
     link: "https://quanby-bms.web.app/regulatory/dashboard",
   },
   {
     title: "Talk-twah: your personal AI voice coaching assistant",
     description: "An AI-Natural Language Processing model applied with Deep Reinforcement Learning for speech rate and emotion feedback.",
     technologies: ["Python", "NLP", "Reinforcement Learning", "React"],
-    image: "talktwah.jpg",
-    link: "https://guthib.com",
+    images: [
+      { src: "/talktwah/talktwah.jpg", caption: "Post-defense picture with co-members Arian T. Allorde and Angelo John S. Calleja" },
+      { src: "/talktwah/talktwah2.png", caption: "Talk-twah user interface" },
+      { src: "/talktwah/talktwah3.jpg", caption: "Consultation with a language expert prior to building and refining speech datasets" },
+      { src: "/talktwah/talktwah4.jpg", caption: "With our esteemed thesis panel and advisers, to whom we extend our gratitude for their guidance and expertise" }
+    ],
+    link: null,
   },
   {
     title: "Pestifier",
     description: "An AI-Image processing mobile app for detecting pests in crops.",
     technologies: ["Python", "CNN", "Java", "Agile"],
-    image: "/ic_launchers-playstore.png",
-    link: "https://r.mtdv.me/videos/yeah",
+    image: "/pest/ic_launchers-playstore.png",
+    link: null,
   },
 ];

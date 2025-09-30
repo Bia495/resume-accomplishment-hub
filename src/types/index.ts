@@ -18,11 +18,17 @@ export interface Experience {
   achievements: string[];
 }
 
+export interface ProjectImage {
+  src: string;
+  caption?: string;
+}
+
 export interface Project {
   title: string;
   description: string;
   technologies: string[];
-  image?: string;
+  images?: ProjectImage[];
+  image?: string; // fallback for legacy data
   link?: string;
 }
 
